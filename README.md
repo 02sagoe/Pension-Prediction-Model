@@ -12,5 +12,5 @@ Programming Language(s): Python
 Libraries: pandas, numpy
 
 ## Getting Started:
-1. Clone this repository: `git clone https://github.com/02sagoe/Predictive-Modeling-for-Population-Shifts.git`
+1. Clone this repository: `https://github.com/02sagoe/Pension-Prediction-Model.git`
 2. Use this notebook: `python main.ipynb`
