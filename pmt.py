@@ -7,7 +7,6 @@ def pmt(present_value, payment_term, payment_cycle='annual', interest_rate=0.01,
         'quaterly': 4,
         'monthly': 12,
     }
-
     number_of_payment_periods = payment_term * payment_cycle_dictionary[payment_cycle]
     payment_rate = interest_rate / payment_cycle_dictionary[payment_cycle]
 
