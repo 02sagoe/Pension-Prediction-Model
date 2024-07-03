@@ -10,9 +10,12 @@ def pmt(present_value, payment_term, payment_cycle='annual', interest_rate=0.01,
     number_of_payment_periods = payment_term * payment_cycle_dictionary[payment_cycle]
     payment_rate = interest_rate / payment_cycle_dictionary[payment_cycle]
 
-    pmt_value_numerator = present_value * payment_rate * ((1 + interest_rate)** number_of_payment_periods)
-    pmt_value_denominator = (((1 + interest_rate)** number_of_payment_periods) - 1)
-    pmt_value = pmt_value_numerator/pmt_value_denominator
+    number_of_payment_period_minus = number_of_payment_periods - (2 * number_of_payment_periods) #converts value into a negative
+
+    pmt_value_numerator = present_value * payment_rate # numerator calculation
+    pmt_value_denominator = (1 - ((1 + payment_rate) ** number_of_payment_period_minus)) # denominator calculation
+    pmt_value = pmt_value_numerator / pmt_value_denominator #final caulculation
+
 
     return pmt_value
 
@@ -21,8 +24,8 @@ def car_loan_scenario(loan_amount, annual_interest_rate, loan_term, payment_cycl
     f"of {annual_interest_rate*100}% and a loan term of {loan_term} years with {payment_cycle} payments.", 
     f"\nYour {payment_cycle} payment amount would be stated below:"
 
-#loan_amount = input('What amount ($) of a loan do you want take?: ')
-#loan_amount = round(float(loan_amount), 2)
+loan_amount = input('What amount ($) of a loan do you want take?: ')
+loan_amount = round(float(loan_amount), 2)
 loan_amount = 20000
 
 annual_interest_rate = 0.05
@@ -30,8 +33,8 @@ annual_interest_rate = 0.05
 payment_cycle = 'monthly'
 payment_cycle = payment_cycle.lower()
 
-#loan_term  = input('How long (years) will you need to pay back the full amount plus the required interest?')
-#loan_term = int(loan_term)
+loan_term  = input('How long (years) will you need to pay back the full amount plus the required interest?')
+loan_term = int(loan_term)
 loan_term = 4
 
 loan_scenario = car_loan_scenario(loan_amount, annual_interest_rate, loan_term, payment_cycle)
