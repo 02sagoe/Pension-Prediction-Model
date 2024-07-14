@@ -10,7 +10,7 @@ Based on the following scenario below. Considering just a basic model for the pr
 
 1. Age - 30 
 2. Expected Retirement Age - 65
-3. Yo have completed your formal education and settled down to plan the rest of your economic life.
+3. You have completed your formal education and settled down to plan the rest of your economic life.
 4. You desire to obtain a (level) annuity for your 25-year retirement period
 5. Annual gross income $50,000
 6. Annual income increase at 7% per year
