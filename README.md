@@ -20,6 +20,7 @@ Based on the following scenario below. Considering just a basic model for the pr
 The following outcomes are the result of it:
 
 ----------<b>Financial Report</b>----------
+
 <b>Total Income Earned:</b> $7,445,673.0
 
 <b>Total Amount Saved:</b> $2,457,517.69
